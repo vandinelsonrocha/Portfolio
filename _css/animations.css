@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@keyframes inicializar  {
+    from  {
+        opacity: 1;
+        transform: translate3d(0, -60px, 0);
+    }
+    to  {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+/*--------------------------------------------------------------*/
+
+nav a  {
+    padding-bottom: 6px;
+    padding-right: 10px;
+    position: relative;
+}
+
+nav a::after  {
+    content: " ";
+    width: 0%;
+    height: 2.5px;
+    background-color: var(--cor1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+nav a:hover::after  {
+    width: 100%;
+}
