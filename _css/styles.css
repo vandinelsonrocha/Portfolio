@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 :root  {
-    --texto-primario: #fff;
+    --cor0: #fff;
     --cor1: #61DAFB;
     --cor2: #1E1E1E; /*dark mode*/
     --cor3: #000;
+    --cor4: #F2F2F2;
 }
 
 body  {
@@ -41,7 +42,7 @@ header > h1  {
 }
 header > h1 > span  {
     font-family: 'Berkshire Swash', cursive;
-    color: var(--texto-primario);
+    color: var(--cor0);
 }
 
 header > div  {
@@ -51,23 +52,32 @@ header > div  {
 
 header > div > nav > .nav-primaria  {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1.3rem;
+    height: 30px;
 }
 
 header > div > nav > .nav-primaria > li > a  {
     font-size: 18px;
     font-weight: 500;
-    color: var(--texto-primario);
+    color: var(--cor0);
 }
 header > div > nav > .nav-primaria > li > a:hover  {
-    text-transform: uppercase;
+    font-weight: 700;
     transition: all 1s;
 }
 
-header > div > div  {
-    width: 35px;
-    height: 15px;
-    background-color: yellow;
+/*-----------LIGHT MODE--------------*/
+.light-mode  {
+    --cor0: #000;
+    --cor2:#F2F2F2;
+    --cor3: #fff;
+}
+
+#moon  {
+    width: 30px;
+    cursor: pointer;
 }
 
 
@@ -78,7 +88,7 @@ section.section-div  {
     justify-items: center;
     align-items: center;
     padding: 0 6rem;
-    color: var(--texto-primario);
+    color: var(--cor0);
     grid-template-columns: 1fr 1fr;
     animation: inicializar .7s;
 }
@@ -96,6 +106,9 @@ section.section-div > div .apresentacao  {
 
 section.section-div > div > h2  {
     font-weight: 500;
+}
+#digitando  {
+    font-weight: 700;
 }
 
 #redes-sociais  {
@@ -128,11 +141,11 @@ section.section-div > div > a  {
     border-radius: 5px;
     font-weight: 700;
     border: 2px solid var(--cor1);
-    color: var(--texto-primario);
+    color: var(--cor0);
     margin-top: 1.5rem;
 }
 section.section-div > div > a:hover  {
-    border-color: var(--texto-primario);
+    border-color: var(--cor0);
     background-color: var(--cor1);
 }
 
