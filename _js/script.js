@@ -1,5 +1,5 @@
 //--------------LIGHT MODE//--------------
-const moon = document.getElementById('moon');
+const moon = document.getElementById('sun');
 
 moon.onclick = function()  {
   document.body.classList.toggle("light-mode");
@@ -13,7 +13,6 @@ moon.onclick = function()  {
 }
 
 //--------------EFEITO DE SCROLL NO HEADER--------------
-
 const header = document.querySelector('header');
 const logo = document.querySelector('#logo');
 
