@@ -3,9 +3,10 @@
 :root  {
     --cor0: #fff;
     --cor1: #61DAFB;
-    --cor2: #1E1E1E; /*dark mode*/
+    --cor2: #151515;
     --cor3: #000;
     --cor4: #F2F2F2;
+    --cor5: #222;
 }
 
 body  {
@@ -73,6 +74,7 @@ header > div > nav > .nav-primaria > li > a:hover  {
     --cor0: #000;
     --cor2:#F2F2F2;
     --cor3: #fff;
+    --cor5: #fff;
 }
 
 #sun  {
@@ -167,9 +169,123 @@ section.section-div > img  {
     border-radius: 5px;
 }
 
-#sobre, #habilidades, #experiencia, #projetos, #contato  {
+body > section, footer  {
     height: 100vh;
     width: 80%;
     margin: 0 auto;
     background-color: var(--cor2);
+}
+
+/*--------------SOBRE--------------*/
+section#sobre  {
+    margin: 0 auto;
+}
+
+#sobre > h2  {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    color: var(--cor1);
+}
+
+.bolinhas  {
+    display: flex;
+    justify-content: center;
+    gap: .3rem;
+}
+.bolinhas > span  {
+    border-radius: 50%;
+    padding: .5rem;
+    background-color: var(--cor1);
+}
+
+#sobre > #infos  {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(1, auto);
+}
+
+#infos > div .sobre-mim  {
+    margin-bottom: 1.3rem;
+} 
+
+#infos > img  {
+    grid-column: 1 / 2;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#infos > div  {
+    grid-column: 2 / -1;
+    height: 100%;
+    padding: 0 1.5rem;
+}
+
+#nome  {
+    font-weight: 600;
+    font-size: 1.8em;
+    color: var(--cor0);
+}
+
+#nome::after{
+    background-color: var(--cor1);
+    height: 6px;
+    width: 80px;
+    margin: 20px 0;
+    content: '';
+    display: block;
+    border-radius: 5px;
+}
+
+#dev  {
+    display: flex;
+    gap: 2rem;
+}
+#dev #w-developer  {
+    margin-left: 2rem;
+}
+#dev #w-designer  {
+    margin-right: 2rem;
+}
+
+.web  {
+    display: flex;
+    flex: 1 0 0;
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5px;
+    padding: 1rem 0;
+    background-color: var(--cor5);
+}
+.web > i  {
+    color: var(--cor1);
+    font-size: 2.6em;
+}
+.web > p  {
+    color: var(--cor0);
+    font-weight: 500;
+    font-size: 1.45em;
+}
+.web > button  {
+    border-radius: 4px;
+    align-self: start;
+    margin: 0 auto;
+    padding: 3px 5px;
+    background-color: var(--cor1);
+    color: var(--cor0);
+}
+
+#formacao  {
+    padding: .7rem 1rem;
+    border-radius: 4px;
+    background-color: var(--cor1);
+    color: var(--cor0);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+#mais-infos  {
+    float: right;
+    color: var(--cor0);
 }
