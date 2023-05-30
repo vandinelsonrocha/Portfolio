@@ -184,13 +184,16 @@ section#sobre  {
 #sobre > h2  {
     text-align: center;
     font-family: 'Berkshire Swash', cursive;
+    padding: 5rem 0 1rem 0;
+    font-size: 2em;
     color: var(--cor1);
 }
 
 .bolinhas  {
     display: flex;
     justify-content: center;
-    gap: .3rem;
+    gap: .7rem;
+    padding-bottom: 2rem;
 }
 .bolinhas > span  {
     border-radius: 50%;
@@ -202,6 +205,11 @@ section#sobre  {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: repeat(1, auto);
+}
+
+#infos > div > p:nth-child(2)  {
+    font-weight: 600;
+    color: var(--cor5);
 }
 
 #infos > div .sobre-mim  {
