@@ -52,4 +52,17 @@ function digitacaoLetras(elemento) {
 
 digitacaoLetras(digitarH2);
 
-  
+//--------------MODAL POPUP--------------
+const formacao = document.querySelector("#formacao");
+const modal = document.querySelector("dialog#dialog");
+const fecharModal = document.querySelector("#dialog span");
+
+formacao.onclick = function()  {
+  modal.showModal();
+}
+
+fecharModal.onclick = function()  {
+  modal.close();
+}
+
+

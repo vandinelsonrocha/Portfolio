@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="_css/reset.css">
     <link rel="stylesheet" href="_css/styles.css">
-    <link rel="stylesheet" href="_css/animations.css">
+    <link rel="stylesheet" href="_css/animations-effects.css">
     <link rel="stylesheet" href="_css/media.css">
     <title>Portfólio | Vandinelson</title>
 </head>
@@ -55,33 +55,54 @@
             <span></span>
         </div>
         <div id="infos">
-            <img src="_img/Vandy.jpg" alt="Minha foto">
+            <div id="imagem-fundo"></div>
             <div>
                 <p id="nome">Vandinelson Gomes</p>
                 <p class="sobre-mim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum animi aspernatur accusantium sunt molestias pariatur voluptatibus, earum modi est autem quam incidunt minus deserunt ad asperiores illum quis cupiditate consequatur?
                 Praesentium aut, voluptatibus illo nisi, ex blanditiis vitae quis fuga, atque nostrum nesciunt voluptatum reprehenderit inventore repudiandae minus pariatur nobis illum totam corrupti asperiores? Consectetur illo natus dicta quo tempore?</p>
                 <div id="dev" class="sobre-mim">
-                    <div id="w-developer" class="web">
-                        <i class="fa-solid fa-globe"></i>
-                        <p>Web Developer</p>
-                        <button>Ver mais</button>
+                    <div class="box">
+                        <div id="w-developer" class="web">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>Web Developer</p>
+                            <button>Ver mais</button>
+                        </div>
                     </div>
-                    <div id="w-designer" class="web">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <p>Web designer</p>
-                        <button>Ver mais</button>
+                    <div class="box">
+                        <div id="w-designer" class="web">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <p>Web designer</p>
+                            <button>Ver mais</button>
+                        </div>
                     </div>
                 </div>
-                <button id="formacao" class="sobre-mim">Formação académica</button>
-                <div id="mais-infos">
-                    <address>Cabo Verde - São Vicente</address>
-                    <p>09/11/2000</p>
-                    <p>vandInforma.tic@gmail.com</p>
+                <div id="form-infos">
+                    <button id="formacao" class="sobre-mim">Formação académica</button>
+                    <dialog id="dialog">
+                        <span>&times</span>
+                        <h2>Title</h2>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi voluptas ipsa voluptatem voluptatibus atque perferendis vero corporis reiciendis accusamus ducimus error laborum, enim consectetur, animi soluta cum alias accusantium illum!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore maiores quidem, iste enim reiciendis blanditiis dolorem fugiat et. Doloribus laboriosam veniam sequi fuga sit facilis sunt illo totam expedita hic.
+                        Libero iste blanditiis impedit ipsum enim ratione, quaerat commodi eaque? Exercitationem, voluptatum ut. Expedita deleniti cumque provident molestias, est distinctio nobis voluptatem, quisquam dolor, sit iste suscipit? Debitis, eligendi fugiat.
+                        Minus sunt, libero vero eligendi reprehenderit ducimus repudiandae atque dolores qui id dicta consectetur, dolore maxime blanditiis quibusdam odio harum ipsam earum maiores quisquam! Quo in obcaecati doloremque eius odio.
+                    </dialog>
+                    <div id="mais-infos">
+                        <address><i class="fa-solid fa-location-dot"></i> Cabo Verde - São Vicente</address>
+                        <p><i class="fa-solid fa-calendar-days"></i> 09/11/2000</p>
+                        <p><i class="fa-solid fa-envelope"></i> vandInforma.tic@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="habilidades"></section>
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="bolinhas">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
     <section id="experiencia"></section>
     <section id="projetos"></section>
     <footer id="contato"></footer>
