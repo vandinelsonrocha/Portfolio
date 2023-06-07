@@ -231,7 +231,7 @@ section#sobre  {
     grid-column: 1 / 2;
     border-radius: 4px;
     width: 100%;
-    background-image: url("../_img/Vandy2.jpg");
+    background-image: url("../img/Vandy2.jpg");
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -350,12 +350,4 @@ section#sobre  {
 #mais-infos i  {
     padding-right: .4rem;
     color: var(--cor1);
-}
-
-
-/*------------------HABILIDADES------------------*/
-section#habilidades  {
-    padding-top: 1rem;
-    background-color: var(--cor7);
-    height: 100vh;
 }

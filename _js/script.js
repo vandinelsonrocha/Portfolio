@@ -5,10 +5,10 @@ moon.onclick = function()  {
   document.body.classList.toggle("light-mode");
 
   if(document.body.classList.contains("light-mode"))  {
-    moon.src = "_img/moon.png";
+    moon.src = "img/moon.png";
   }
   else  {
-    moon.src = "_img/sun.png";
+    moon.src = "img/sun.png";
   }
 }
 
@@ -64,5 +64,35 @@ formacao.onclick = function()  {
 fecharModal.onclick = function()  {
   modal.close();
 }
+
+var swiper = new Swiper(".swiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  loop: true,
+  centerSlide: 'true',
+  fade: 'true',
+  grabCursor: 'true',
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints:{
+      0: {
+          slidesPerView: 1,
+      },
+      520: {
+          slidesPerView: 2,
+      },
+      950: {
+          slidesPerView: 3,
+      },
+  },
+});
 
 

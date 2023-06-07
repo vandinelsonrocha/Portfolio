@@ -1,0 +1,59 @@
+section#habilidades  {
+    padding-top: 1rem;
+    height: 100vh;
+    background-color: var(--cor7);
+}
+
+#slider  {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.swiper  {
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.tech-desc {
+    width: 13rem;
+    height: 100%;
+    margin: 0 auto;
+    border: 3px solid var(--cor1);
+    border-radius: 15px;
+    padding: 0 1rem;
+    background-color: var(--cor5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1.3rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+
+
+#html  {
+    background-image: url(../img/logo-html.png);
+}
+#css  {
+    background-image: url(../img/logo-css.png);
+}
+#js  {
+    background-image: url(../img/logo-js.png);
+}
+#react  {
+    background-image: url(../img/logo-react.png);
+}
+#git  {
+    background-image: url(../img/logo-git.png);
+}
+#figma  {
+    background-image: url(../img/logo-figma.png);
+}
