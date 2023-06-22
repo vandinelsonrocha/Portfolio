@@ -95,4 +95,25 @@ var swiper = new Swiper(".swiper", {
   },
 });
 
+const wrapper = document.querySelectorAll('.wrapper');
+const tech_name = document.querySelectorAll('.image span');
+
+for (let i = 0; i < wrapper.length; i++) {
+  if (wrapper[i] && tech_name[i]) {
+    wrapper[i].addEventListener("mouseover", function() {
+      tech_name[i].style.display = "none";
+    });
+    wrapper[i].addEventListener("mouseout", function() {
+      tech_name[i].style.display = "block";
+    });
+  }
+}
+
+//---------HABILIDADES ver mais...ver menos---------
+
+
+
+
+
+
 

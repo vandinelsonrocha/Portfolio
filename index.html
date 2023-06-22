@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--LINK ÍCONES DO FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--LINK DA API Swiperjs-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!--LINKS CSS DO PORTFÓLIO-->
     <link rel="stylesheet" href="_css/reset.css">
-    <link rel="stylesheet" href="_css/styles.css">
+    <link rel="stylesheet" href="_css/home.css">
+    <link rel="stylesheet" href="_css/sobre.css">
     <link rel="stylesheet" href="_css/habilidades.css">
-    <link rel="stylesheet" href="_css/animations-effects.css">
-    <link rel="stylesheet" href="_css/media.css">
+    <link rel="stylesheet" href="_css/experiencia.css">
+    <link rel="stylesheet" href="_css/projetos.css">
+    <link rel="stylesheet" href="_css/contato.css">
     <title>Portfólio | Vandinelson</title>
 </head>
 <body>
@@ -32,7 +38,7 @@
         </header>
         <section aria-label="seção currículo download Vandinelson" class="section-div">
             <div>
-                <h2 class="apresentacao">Olá, meu nome é Vandinelson Gomes</h2>
+                <h2 class="apresentacao">Olá, meu nome é <span id="meuNome">Vandinelson Gomes</span></h2>
                 <h2 class="apresentacao" id="digitando">Desenvolvedor Web Frontend | UI Designer</h2>
                 <p class="apresentacao">
                     Este é o meu site oficial de portfólio para mostrar todos os meus trabalhos relacionados com o desenvolvimento web e UI design.
@@ -66,14 +72,18 @@
                         <div id="w-developer" class="web">
                             <i class="fa-solid fa-globe"></i>
                             <p>Web Developer</p>
-                            <button>Ver mais</button>
+                            <p class="web-desc" id="paaa">
+                                Crio interfaces de sites ou aplicativos que se adaptam a qualquer dispositivo garantindo uma experiência de usuário intuitiva e agradável, através de tecnologias modernas como HTML, CSS, JavaScript e ReactJS. Capaz de trabalhar em equipe, entender os requisitos e as necessidades dos clientes e colaborar com designers, como também todos os profissionais envolvidos no projeto. Sou uma pessoa que busca sempre a criatividade, em contante aprendizado para garantir as melhores práticas e manter sempre atualizado para acompanhar as tendências da área além de possuir habilidades para resolução de problemas.
+                            </p>
                         </div>
                     </div>
                     <div class="box">
                         <div id="w-designer" class="web">
                             <i class="fa-solid fa-pen-to-square"></i>
                             <p>Web designer</p>
-                            <button>Ver mais</button>
+                            <p class="web-desc">
+                                Estudando o Web Design a pouco tempo, o ojetivo é ganhar habilidades para desenhar o visual de interfaces de usuário intuitivas e funcionais. Quero entender como as interfaces são projetadas antes de ser implementadas, usando ferramentas como o Figma. Apaixonando pela área a cada aprendizado, pretendo criar visuais focados no equilíbrio entre estética, funcionalidade e qualidade.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -103,7 +113,9 @@
             <span></span>
             <span></span>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolore quibusdam dolor cumque. Incidunt, eligendi reprehenderit voluptatum aut amet veniam temporibus, non quasi repellat cumque iste quos ad maxime nesciunt.</p>
+        <p>
+            Conhecimento sólido em HTML, CSS, JavaScript e Git. Iniciei meus estudos em React e UI Design, usando o figma, recentemente, com um caminho longo de conhecimentos por adquirir ainda, porém com minha vontade de aprender coisas novas todos os dias, isso é só questão de tempo, além de várias outras tecnologias para fazer projetos profissionais e consistentes.
+        </p>
         <div id="slider">
             <!-- Slider main container -->
             <div class="swiper">
@@ -114,9 +126,12 @@
                         <div class="wrapper">
                             <div class="image">
                                 <img src="img/logo-html.png" alt="Logo do HTML">
+                                <span>HTML</span>
                                 <div class="content">
                                     <h1>HTML</h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati quae illum ipsam consequatur numquam quia illo explicabo, qui facere accusantium, molestias necessitatibus accusamus doloremque mollitia et quidem nemo adipisci. Dignissimos!</p>
+                                    <p>
+                                        Considerado a espinha dorsal da Web, tenho domínio da estruturação semântica do HTML para criar uma base sólida para os elementos e conteúdos de uma página web.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -126,9 +141,12 @@
                         <div class="wrapper">
                             <div class="image">
                                 <img src="img/logo-css.png" alt="Logo do CSS">
+                                <span>CSS</span>
                                 <div class="content">
                                     <h1>CSS</h1>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <p>
+                                        Capacitado para aplicar estilos visuais e garantir uma experiência agradável para o usuário, além de criar layouts responsivos usando tecnologias modernas como CSS Flexbox, CSS Grid e Media Queries.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -138,9 +156,12 @@
                         <div class="wrapper">
                             <div class="image">
                                 <img src="img/logo-js.png" alt="Logo do JavaScript">
+                                <span>JavaScript</span>
                                 <div class="content">
                                     <h1>JavaScript</h1>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <p>
+                                        Essencial para a interatividade e dinamismo de uma página Web, tenho proficiência para criar interações, manipular elementos da página, lidar com eventos e realizar requisições assíncronas, mas ciente de que ainda há um caminho longo a percorrer nesta linguagem tão vasta.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -150,9 +171,12 @@
                         <div class="wrapper">
                             <div class="image">
                                 <img src="img/logo-react.png" alt="Logo do ReactJS">
+                                <span id="react">ReactJS</span>
                                 <div class="content">
                                     <h1>ReactJS</h1>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <p>
+                                        Os estudos iniciaram recentemente e desde então não têm parado com o objetivo de dominar esta biblioteca tão popular para construção de interfaces de usuário e não só.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -162,9 +186,12 @@
                         <div class="wrapper">
                             <div class="image">
                                 <img src="img/logo-git.png" alt="Logo do Git">
+                                <span>Git</span>
                                 <div class="content">
                                     <h1>Git</h1>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <p>
+                                        É o sistema de controle de versão mais utilizado na indústria do desenvolvimento de software, uso para controlar e gerenciar o código fonte dos projetos, permitindo colaboração eficiente, rastreamento de alterações e trabalho em equipe.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -174,9 +201,12 @@
                         <div class="wrapper">
                             <div class="image">
                                 <img src="img/logo-figma.png" alt="Logo do Figma">
+                                <span>Figma</span>
                                 <div class="content">
                                     <h1>Figma</h1>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <p>
+                                        Ultimamente ganhei bastante interesse pelo design e desde então tenho aprofundado particularmente em design de interfaces de usuário usando o Figma. Acredito que com esses conhecimentos eu possa fazer implementações mais precisas, interfaces de usuário melhores e maior autonomia no processo de desenvolvimento.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +223,9 @@
     <section id="projetos"></section>
     <footer id="contato"></footer>
  
+    <!--LINK ÍCONES DO IONICONS-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <!--LINK JAVASCRIPT DA API Swiperjs-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="_js/script.js"></script>
 </body>
