@@ -2,7 +2,7 @@ section#sobre  {
     margin: 0 auto;
 }
 
-#sobre > h2, #habilidades > h2  {
+#sobre > h2, #habilidades > h2, #projetos h2  {
     text-align: center;
     font-family: 'Berkshire Swash', cursive;
     padding: 5rem 0 1rem 0;
