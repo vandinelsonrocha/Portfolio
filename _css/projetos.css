@@ -17,40 +17,105 @@
     cursor: pointer;
 }
 
+.modelos-projeto > ul > li.ativo  {
+    background-color: var(--cor1);
+    font-weight: bold;
+}
+
 .armazenamento-projetos > ul  {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 1rem;
+    row-gap: .8rem;
 }
 
-.armazenamento-projetos > ul > li  {
+.armazenamento-projetos > ul > .projeto  {
     display: flex;
     flex-direction: column;
+    position: relative;
+    animation: mostrarProjetos 1s ease-in-out;
+}
+
+@keyframes mostrarProjetos  {
+    0%  {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    100%  {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.armazenamento-projetos > ul > .projeto:hover  {
+    transform: scale(1.07);
+    transition: transform 0.6s;
 }
 
 .imagem-projeto > img  {
     width: 100%;
-    height: 160px;
+    height: 170px;
     border-radius: 5px 5px 0 0;
 }
 
 .techs  {
-    transform: translateY(-55px);
-    margin-left: 20px;
-    color: var(--cor1);
+    position: absolute;
+    color: rgb(13, 119, 206);
+    font-weight: 600;
+    top: 140px;
+    left: 20px;
+    text-transform: uppercase;
+    opacity: 0;
 }
 
 .repositorio  {
-    transform: translateY(-23px);
+    display: block;
     text-align: center;
-    padding: .4rem 0;
+    padding: .5rem 0;
+    width: 100%;
     border-radius: 0 0 5px 5px;
     font-weight: 600;
     background-color: var(--cor5);
     color: var(--cor6);
+    transform: translateY(-4px);
+}
+
+.repositorio > a  {
+    width: 100%;
+    height: 100%;
+    color: var(--cor6);    
 }
 
 .repositorio:hover  {
-    color: var(--cor0);
     background-color: var(--cor1);
 }
+
+.backend  {
+    position: absolute;
+    top: 0;
+    color: rgb(13, 119, 206);
+    font-weight: 600;
+    top: 20px;
+    right: -4px;
+    text-align: right;
+    margin-right: 20px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+button#mostrar  {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: .5rem 2rem;
+    color: var(--cor6);
+    background-color: var(--cor5);
+    border: 1px solid var(--cor1);
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button#mostrar:hover  {
+    border: 1px solid var(--cor0);
+    background-color: var(--cor1);
+} 
+

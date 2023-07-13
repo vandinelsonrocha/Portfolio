@@ -128,8 +128,163 @@ verMenos.addEventListener("click", function()  {
 });
 
 
+//---------PROJETOS---------
+const projetos = document.querySelectorAll('.projeto');
+
+projetos.forEach((projeto) => {
+  projeto.addEventListener('mouseover', () => {
+    const paragrafos = projeto.querySelectorAll('p');
+    paragrafos.forEach((paragrafo) => {
+      if (paragrafo.classList.contains('backend')) {
+        paragrafo.style.opacity = '1';
+      } else if (paragrafo.classList.contains('techs')) {
+        paragrafo.style.opacity = '1';
+      }
+    });
+  });
+
+  projeto.addEventListener('mouseout', () => {
+    const paragrafos = projeto.querySelectorAll('p');
+    paragrafos.forEach((paragrafo) => {
+      paragrafo.style.opacity = '0';
+    });
+  });
+});
 
 
+//Selecionar projeto específico:
+const botaoGeral = document.querySelectorAll(".modelos-projeto ul li")
+//Função que remove ou adiciona a classe ativo nos botões:
+function removerClick(index)  {
+  botaoGeral.forEach((item) =>  {
+    item.classList.remove('ativo')
+  })
+  botaoGeral[index].classList.add('ativo')
+}
+
+botaoGeral.forEach((event, index) =>  {
+  event.addEventListener("click", () =>  {
+    removerClick(index)
+  })
+})
+
+const todosProjetos = document.querySelectorAll('.armazenamento-projetos ul li')
+const projetosWebsite = document.querySelectorAll('.website')
+const projetosDesign = document.querySelectorAll('.design')
+const outrosProjetos = document.querySelectorAll('.outros')
+const todos = document.getElementById('todos')
+const websites = document.getElementById('website')
+const design = document.getElementById('design')
+const outros = document.getElementById('outros')
+const mostrar = document.getElementById('mostrar')
+let exibirMais = false;
+
+todos.addEventListener("click", () =>  {
+  for(let i=0; i<todosProjetos.length; i++)  {
+    todosProjetos[i].style.display = "block"
+  }
+})
+
+websites.addEventListener("click", () =>  {
+  for(let i=0; i<projetosWebsite.length; i++)  {
+    projetosWebsite[i].style.display = "block"
+  }
+
+  for(let i=0; i<todosProjetos.length; i++)  {
+    if(todosProjetos[i].classList.contains('design') || todosProjetos[i].classList.contains('outros'))  {
+      todosProjetos[i].style.display = "none"
+    }
+  }
+
+  // Verifica se há itens ocultos e atualiza o botão "Mostrar mais"
+  if (exibirMais && projetosWebsite.length > 6) {
+    mostrar.textContent = 'Mostrar menos';
+  } else {
+    mostrar.textContent = 'Mostrar mais';
+  }
+})
 
 
+design.addEventListener("click", () =>  {
+  for(let i=0; i<projetosDesign.length; i++)  {
+    projetosDesign[i].style.display = "block"
+  }
 
+  for(let i=0; i<todosProjetos.length; i++)  {
+    if(todosProjetos[i].classList.contains('design'))  {
+      todosProjetos[i].style.display = "block"
+    }
+    if(todosProjetos[i].classList.contains('website') || todosProjetos[i].classList.contains('outros'))  {
+      todosProjetos[i].style.display = "none"
+    }
+  }
+
+  // Verifica se há itens ocultos e atualiza o botão "Mostrar mais"
+  if (exibirMais && projetosDesign.length > 6) {
+    mostrar.textContent = 'Mostrar menos';
+  } else {
+    mostrar.textContent = 'Mostrar mais';
+  }
+})
+
+outros.addEventListener("click", () =>  {
+  for(let i=0; i<todosProjetos.length; i++)  {
+    if(todosProjetos[i].classList.contains('outros'))  {
+      todosProjetos[i].style.display = "block"
+    }
+    if(todosProjetos[i].classList.contains('website') || todosProjetos[i].classList.contains('design'))  {
+      todosProjetos[i].style.display = "none"
+    }
+  }
+
+  // Verifica se há itens ocultos e atualiza o botão "Mostrar mais"
+  if (exibirMais && outrosProjetos.length > 6) {
+    mostrar.textContent = 'Mostrar menos';
+  } else {
+    mostrar.textContent = 'Mostrar mais';
+  }
+})
+
+for(let i=0; i<todosProjetos.length; i++)  {
+  if(i >= 8)  {
+    todosProjetos[i].style.display = "none"
+  }
+}
+
+function mostrarMenos() {
+  for (let i = todosProjetos.length - 6; i < todosProjetos.length; i++) {
+    todosProjetos[i].style.display = 'none';
+  }
+}
+
+function mostrarMais() {
+  for (let i = todosProjetos.length - 6; i < todosProjetos.length; i++) {
+    todosProjetos[i].style.display = 'block';
+  }
+}
+
+mostrar.addEventListener('click', function () {
+  if (exibirMais) {
+    mostrarMenos();
+    mostrar.textContent = 'Mostrar mais';
+    exibirMais = false;
+  } else {
+    if (todos.classList.contains('ativo')) {
+      mostrarMais();
+    } else if (projetosWebsite[0].style.display === 'block') {
+      for (let i = 0; i < projetosWebsite.length; i++) {
+        projetosWebsite[i].style.display = 'block';
+      }
+    } else if (projetosDesign[0].style.display === 'block') {
+      for (let i = 0; i < projetosDesign.length; i++) {
+        projetosDesign[i].style.display = 'block';
+      }
+    } else if (outrosProjetos[0].style.display === 'block') {
+      for (let i = 0; i < outrosProjetos.length; i++) {
+        outrosProjetos[i].style.display = 'block';
+      }
+    }
+    mostrar.textContent = 'Mostrar menos';
+    exibirMais = true;
+  }
+});
