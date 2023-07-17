@@ -19,13 +19,13 @@
     <title>Portfólio | Vandinelson</title>
 </head>
 <body>
-    <main id="home">
+    <main id="inicio">
         <header class="max">
             <h1 id="logo">&lt;Port<span>fólio/&gt;</span></h1>
             <div>
                 <nav>
                     <ul class="nav-primaria">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#habilidades">Habilidades</a></li>
                         <li><a href="#experiencia">Experiência</a></li>
@@ -102,7 +102,7 @@
                     </dialog>
                     <div id="mais-infos">
                         <address><i class="fa-solid fa-location-dot"></i> Cabo Verde - São Vicente</address>
-                        <p><i class="fa-solid fa-calendar-days"></i> 09/11/2000</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> +238 9963939</p>
                         <p><i class="fa-solid fa-envelope"></i> vandInforma.tic@gmail.com</p>
                     </div>
                 </div>
@@ -433,7 +433,65 @@
             </ul>
         </div>
     </section>
-    <footer id="contato"></footer>
+    <footer id="contato">
+        <div id="grid-form">
+            <form action="https://formsubmit.co/vandInforma.tic@gmail.com" method="post">
+                <div class="inputBox">
+                    <input type="text" name="nome" id="cmpNome" class="inputUser" required>
+                    <label for="cmpNome">Nome*</label>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" id="cmpEmail" class="inputUser" required>
+                    <label for="cmpEmail">E-mail*</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="assunto" id="cmpAssunto" class="inputUser" required>
+                    <label for="cmpAssunto">Assunto*</label>
+                </div>
+                <textarea name="msg" id="msg" rows="7" placeholder="Mensagem"></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="submit" value="Enviar">
+            </form>
+            <div id="img-contato">
+                <div id="flex-div">
+                    <span>Contacte<br>me</span>
+                    <p>
+                        Para projetar-mos o seu próximo projeto de sucesso e desfrutares de trabalhos de qualidade.
+                    </p>
+                </div>
+                <figure>
+                    <img src="img/contato-img.png" alt="Homem apontando para esquerda">
+                </figure>
+            </div>
+        </div>
+        <ul id="footer-navegacao">
+            <li id="localizacao">
+                <address><i class="fa-solid fa-location-dot"></i> Cabo Verde - São Vicente</address>
+                <p><i class="fa-solid fa-calendar-days"></i> +238 9963939</p>
+                <p><i class="fa-solid fa-envelope"></i> vandInforma.tic@gmail.com</p>
+            </li>
+            <li id="navegacao">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </li>
+        </ul>
+        <ul id="apps-contato">
+            <li>
+                <a href="https://github.com/vandinelsonrocha" target="_blank" rel="external"><ion-icon name="logo-github"></ion-icon></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/vandy-gomes/" target="_blank" rel="external"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li>
+                <a href="https://wa.me/2389963939" target="_blank" rel="external"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </li>
+        </ul>
+        <p id="rights-reserved">Copyright &copy; 2023 Vandinelson Gomes. All Rights Reserved</p>
+    </footer>
  
     <!--LINK ÍCONES DO IONICONS-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

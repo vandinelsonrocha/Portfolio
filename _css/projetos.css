@@ -1,3 +1,7 @@
+section#projetos  {
+    padding-bottom: 1.5rem;
+}
+
 .modelos-projeto > ul {
     display: flex;
     justify-content: center;

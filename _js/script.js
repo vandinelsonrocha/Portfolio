@@ -15,6 +15,7 @@ moon.onclick = function()  {
 //--------------EFEITO DE SCROLL NO HEADER--------------
 const header = document.querySelector('header');
 const logo = document.querySelector('#logo');
+const linkTopo = document.querySelector('#link-topo');
 
 window.addEventListener("scroll", diminuirHeader);
 
@@ -28,6 +29,12 @@ function diminuirHeader()  {
         header.classList.add("max"); 
         header.classList.remove("min"); 
         logo.style.fontSize = "32px"; 
+    }
+    if(window.pageYOffset >= 500)  {
+      linkTopo.style.display = "block";
+    }
+    else  {
+      linkTopo.style.display = "none";
     }
 }
 
