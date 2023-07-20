@@ -1,4 +1,5 @@
-//--------------LIGHT MODE//--------------
+//--------------INICIO--------------
+//--------------LIGHT MODE--------------
 const moon = document.getElementById('sun');
 
 moon.onclick = function()  {
@@ -47,18 +48,25 @@ function digitacaoLetras(elemento) {
   elemento.innerHTML = '';
   tituloH2.forEach((letra, i) => {
     setTimeout(() => {
-      if (letra === '|') {
-        elemento.innerHTML += '<span style="color: white;">|</span>';
-      } else {
         elemento.innerHTML += letra;
         elemento.style.color = "#61DAFB";
-      }
     }, 75 * i);
   });
 }
 
 digitacaoLetras(digitarH2);
 
+//--------------Responsividade---------------
+const ativaMenu = document.querySelector('.fa-bars')
+const navMenu = document.querySelector('header .nav-primaria')
+
+ativaMenu.addEventListener('click', () =>  {
+  ativaMenu.classList.toggle('fa-x')
+  navMenu.classList.toggle('ativado')
+})
+
+
+//--------------SOBRE---------------
 //--------------MODAL POPUP--------------
 const formacao = document.querySelector("#formacao");
 const modal = document.querySelector("dialog#dialog");
@@ -72,6 +80,8 @@ fecharModal.onclick = function()  {
   modal.close();
 }
 
+
+//-------------HABILIDADES----------------
 var swiper = new Swiper(".swiper", {
   slidesPerView: 3,
   slidesPerGroup: 1,
@@ -116,8 +126,7 @@ for (let i = 0; i < wrapper.length; i++) {
   }
 }
 
-//---------HABILIDADES ver mais...ver menos---------
-
+//---------ver mais...ver menos---------
 let verMais = document.querySelector("#mais");
 let verMenos = document.querySelector("#menos");
 let texto = document.querySelector("#texto");
