@@ -83,6 +83,7 @@ fecharModal.onclick = function()  {
 
 //-------------HABILIDADES----------------
 var swiper = new Swiper(".swiper", {
+  resizeObserver: true,
   slidesPerView: 3,
   slidesPerGroup: 1,
   loop: true,

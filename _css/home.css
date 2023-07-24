@@ -38,8 +38,7 @@ body  {
 }
 
 body > main  {
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
 }
 
 header  {
@@ -48,7 +47,7 @@ header  {
     justify-content: space-between;
     background-color: var(--cor3);
     padding: 0 3rem;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -227,10 +226,15 @@ section.section-div > img  {
     font-size: 1.7rem;
     border-radius: 5px;
     display: none;
+    z-index: 100;
 }
 
 /*MOBILE*/
 @media screen and (max-width: 768px)  {
+    body, html  {
+        overflow-x: hidden!important;
+    }
+
     header  {
         padding: 0 1rem;
     }
@@ -281,8 +285,8 @@ section.section-div > img  {
     section.section-div > img  {
         grid-row: 1 / 2;
         border-radius: 50%;
-        width: 70%;
-        height: 55%;
+        width: 110%;
+        height: 60%;
         border: 4px solid var(--cor1);
         padding: 4px;
         margin-top: 1rem;
@@ -310,6 +314,10 @@ section.section-div > img  {
     .fa-bars, .fa-x  {
         display: none;
     }
+}
+
+body, html  {
+    overflow-x: hidden !important;
 }
 
 body > section  {
