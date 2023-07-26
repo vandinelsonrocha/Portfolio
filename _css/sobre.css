@@ -51,6 +51,12 @@ section#sobre  {
     color: var(--cor0);
 }
 
+#mais, #menos  {
+    color: gray;
+    cursor: pointer;
+    font-weight: 600;
+}
+
 .texto-sobre  {
     color: var(--cor0);
     margin-bottom: 2rem;
@@ -129,6 +135,10 @@ dialog  {
 @media screen and (max-width: 768px)  {
     body > section  {
         width: 100%;
+    }
+
+    #nome  {
+        display: none;
     }
 
     #sobre > #infos  {

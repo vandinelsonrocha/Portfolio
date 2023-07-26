@@ -187,11 +187,9 @@ botaoGeral.forEach((event, index) =>  {
 
 const todosProjetos = document.querySelectorAll('.armazenamento-projetos ul li')
 const projetosWebsite = document.querySelectorAll('.website')
-const projetosDesign = document.querySelectorAll('.design')
 const outrosProjetos = document.querySelectorAll('.outros')
 const todos = document.getElementById('todos')
 const websites = document.getElementById('website')
-const design = document.getElementById('design')
 const outros = document.getElementById('outros')
 const mostrar = document.getElementById('mostrar')
 let exibirMais = false;
@@ -215,29 +213,6 @@ websites.addEventListener("click", () =>  {
 
   // Verifica se há itens ocultos e atualiza o botão "Mostrar mais"
   if (exibirMais && projetosWebsite.length > 6) {
-    mostrar.textContent = 'Mostrar menos';
-  } else {
-    mostrar.textContent = 'Mostrar mais';
-  }
-})
-
-
-design.addEventListener("click", () =>  {
-  for(let i=0; i<projetosDesign.length; i++)  {
-    projetosDesign[i].style.display = "block"
-  }
-
-  for(let i=0; i<todosProjetos.length; i++)  {
-    if(todosProjetos[i].classList.contains('design'))  {
-      todosProjetos[i].style.display = "block"
-    }
-    if(todosProjetos[i].classList.contains('website') || todosProjetos[i].classList.contains('outros'))  {
-      todosProjetos[i].style.display = "none"
-    }
-  }
-
-  // Verifica se há itens ocultos e atualiza o botão "Mostrar mais"
-  if (exibirMais && projetosDesign.length > 6) {
     mostrar.textContent = 'Mostrar menos';
   } else {
     mostrar.textContent = 'Mostrar mais';

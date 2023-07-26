@@ -169,3 +169,34 @@ input[type="submit"]:hover  {
     background-color: var(--cor2);
     border-top: 1.2px solid var(--cor0);
 }
+
+@media screen and (max-width: 768px)  {
+    footer#contato  {
+        width: 100%;
+    }
+
+    #grid-form  {
+        grid-template-columns: 1fr;
+    }
+
+    #img-contato  {
+        grid-row: 1 / 2;
+    }
+
+    #flex-div  {
+        flex-direction: column;
+    }
+
+    #flex-div > p  {
+        margin-bottom: 1.5rem;
+    }
+
+    figure  {
+        display: none;
+    }
+
+    #footer-navegacao  {
+        flex-direction: column-reverse;
+        gap: 1.6rem;
+    }
+}

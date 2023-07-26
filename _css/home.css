@@ -120,7 +120,6 @@ nav a:hover::after  {
 }
 
 section.section-div  {
-    height: 100vh;
     background-color: var(--cor2);
     display: grid;
     justify-items: center;
@@ -163,6 +162,7 @@ section.section-div > div .apresentacao  {
 
 section.section-div > div > p:first-of-type  {
     color: var(--cor6);
+    margin-bottom: 1.4rem;
 }
 
 section.section-div > div > h2  {
@@ -173,41 +173,113 @@ section.section-div > div > h2  {
 }
 
 #redes-sociais  {
-    font-size: 30px;
+    grid-column: 1 / -1;
     display: flex;
-    gap: 1.5rem;
-    height: 50px;
-    margin-top: 1.5rem;
+    gap: 2.3rem;
 }
 
-#redes-sociais a:hover  {
-    font-size: 40px;
-    transition: all .15s;
+#redes-sociais .rede  {
+    list-style: none;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-#redes-sociais a:first-child  {
-    color: gray;
-}
-#redes-sociais a:nth-child(even)  {
-    color: #0077B5;
-}
-#redes-sociais a:last-child  {
-    color: #25D366;    
+#redes-sociais .rede:before, #redes-sociais .rede:after  {
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    transition: all .3s linear;
 }
 
-section.section-div > div > a  {
-    align-self: start;
-    justify-self: start;
-    padding: .4rem 1.2rem;
+#redes-sociais .rede:nth-child(1):before  {
+    border: 2px solid gray; 
+}
+#redes-sociais .rede:nth-child(1):after  {
+    background-color: gray;
+}
+
+#redes-sociais .rede:nth-child(2):before  {
+    border: 2px solid #0077B5;
+}
+#redes-sociais .rede:nth-child(2):after  {
+    background-color: #0077B5;
+}
+
+#redes-sociais .rede:nth-child(3):before  {
+    border: 2px solid #25D366;
+}
+#redes-sociais .rede:nth-child(3):after  {
+    background-color: #25D366;
+}
+
+#redes-sociais .curriculum  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.2rem;
     border-radius: 5px;
     font-weight: 700;
     border: 2px solid var(--cor1);
-    color: var(--cor0);
-    margin-top: 1.5rem;
 }
-section.section-div > div > a:hover  {
+#redes-sociais .curriculum:hover  {
     border-color: var(--cor0);
     background-color: var(--cor1);
+}
+#redes-sociais .curriculum a  {
+    color: var(--cor0);
+}
+
+#redes-sociais .rede:after  {
+    opacity: 0;
+    z-index: -1;
+}
+
+#redes-sociais .rede:hover:after  {
+    opacity: 1;
+    z-index: 1;
+}
+
+#redes-sociais .rede a ion-icon  {
+    font-size: 25px;
+}
+
+#redes-sociais li:nth-child(1) ion-icon  {
+    color: gray;
+}
+
+#redes-sociais .rede:nth-child(2) ion-icon  {
+    color: #0077B5;
+}
+
+#redes-sociais .rede:nth-child(3) ion-icon  {
+    color: #25D366;
+}
+
+#redes-sociais .rede a ion-icon  {
+    font-size: 21px;
+}
+
+#redes-sociais .rede:hover ion-icon  {
+    color: white;
+    font-size: 24px;
+    z-index: 2;
+    transition: all .3s linear;
+}
+
+#redes-sociais .rede:hover:before  {
+    transform: scale(1.1);
+}
+
+#redes-sociais li a  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section.section-div > img  {
@@ -250,11 +322,11 @@ section.section-div > img  {
         display: flex;
         align-items: center;
         font-weight: 800;
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     header > h1  {
-        font-size: 1em;
+        font-size: 1.4em;
     }
 
     header > div > nav > .nav-primaria.ativado  {
@@ -263,6 +335,7 @@ section.section-div > img  {
         top: 40px;
         height: 100%;
         z-index: 1;
+        right: 1px;
         border-radius: 0 0 4px 4px;
         animation: sobeSecao .8s ease-in-out forwards;       
     }
@@ -280,12 +353,12 @@ section.section-div > img  {
     section.section-div  {
         grid-template-columns: 100%;
         grid-template-rows: repeat(2, auto);
+        padding: 0 1rem;
     }
 
     section.section-div > img  {
         grid-row: 1 / 2;
         border-radius: 50%;
-        width: 110%;
         height: 60%;
         border: 4px solid var(--cor1);
         padding: 4px;
@@ -297,15 +370,24 @@ section.section-div > img  {
     }
 
     #redes-sociais  {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
         font-size: 30px;
-        display: flex;
-        gap: 2.5rem;
+        gap: 2rem 1.3rem;
         height: 50px;
-        margin-top: 1.5rem;
     }
 
-    section.section-div > div > a  {
-        margin-left: 2rem;
+    .curriculum  {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        justify-self: self-start;
+        height: 50px;
+    }
+
+    .curriculum > a  {
+        font-weight: 500;
+        font-size: .8em;
     }
 }
 
