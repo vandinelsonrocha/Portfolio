@@ -1,6 +1,6 @@
 # Portfolio
-#Frontend_development #Web_development #Web_design #UI-Design
+#HTML #CSS #JS
 
-#HTML #CSS #JS #REACTJS
+#Frontend_development #Web_development
 
 Ps: In development process...
