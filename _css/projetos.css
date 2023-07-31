@@ -5,10 +5,7 @@ section#projetos  {
 .modelos-projeto > ul {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-}
-
-.modelos-projeto > ul  {
+    gap: 3rem;
     padding-bottom: 2rem;
 }
 
@@ -123,10 +120,31 @@ button#mostrar:hover  {
     background-color: var(--cor1);
 } 
 
+/*MOBILE*/
+@media screen and (max-width: 320px)  {
+    .modelos-projeto > ul  {
+        justify-content: space-between;
+        gap: 0rem;
+        padding: 0 .4rem;
+        padding-bottom: 2rem;
+    }
+}
+
 @media screen and (max-width: 768px)  {
+    .modelos-projeto > ul  {
+        gap: 1.5rem;
+    }
+    
     .armazenamento-projetos > ul  {
         grid-template-columns: repeat(2, 1fr);
         padding: 0 1rem;
+    }
+}
+
+/*TABLET*/
+@media screen and (min-width: 768.1px) and (max-width: 992px)  {
+    .armazenamento-projetos > ul  {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

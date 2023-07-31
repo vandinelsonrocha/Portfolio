@@ -170,6 +170,7 @@ input[type="submit"]:hover  {
     border-top: 1.2px solid var(--cor0);
 }
 
+/*MOBILE*/
 @media screen and (max-width: 768px)  {
     footer#contato  {
         width: 100%;
@@ -198,5 +199,25 @@ input[type="submit"]:hover  {
     #footer-navegacao  {
         flex-direction: column-reverse;
         gap: 1.6rem;
+    }
+}
+
+/*TABLET*/
+@media screen and (min-width: 768.1px) and (max-width: 992px)  {
+    footer#contato  {
+        width: 95%;
+    }
+
+    #grid-form  {
+        grid-template-columns: 55% 45%;
+        padding: 5rem 0rem 3rem 0rem;
+    }
+
+    #flex-div  {
+        padding-top: 1rem;
+    }
+
+    figure  {
+        padding-top: 2.5rem;
     }
 }

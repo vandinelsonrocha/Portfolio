@@ -37,6 +37,10 @@ body  {
     background-color: var(--cor3);
 }
 
+body, html  {
+    overflow-x: hidden!important;
+}
+
 body > main  {
     width: 100vw;
 }
@@ -112,6 +116,11 @@ nav a::after  {
 nav a:hover::after  {
     width: 100%;
 }
+
+#translate-container {
+    display: inline-block !important;
+    margin-right: 10px; /* Adapte a margem conforme necessário */
+}  
 
 #sun  {
     width: 20px;
@@ -301,19 +310,8 @@ section.section-div > img  {
     z-index: 100;
 }
 
-/*MOBILE*/
-@media screen and (max-width: 768px)  {
-    body, html  {
-        overflow-x: hidden!important;
-    }
-
-    header  {
-        padding: 0 1rem;
-    }
-    .max  {
-        height: 40px;
-    }
-
+/*MOBILE  e TABLET*/
+@media screen and (max-width: 992px)  {
     header > div > nav > .nav-primaria  {
         display: none;
     }
@@ -322,17 +320,11 @@ section.section-div > img  {
         display: flex;
         align-items: center;
         font-weight: 800;
-        font-size: 1.3em;
-    }
-
-    header > h1  {
-        font-size: 1.4em;
     }
 
     header > div > nav > .nav-primaria.ativado  {
         position: absolute;
         display: grid; 
-        top: 40px;
         height: 100%;
         z-index: 1;
         right: 1px;
@@ -348,6 +340,28 @@ section.section-div > img  {
         to  {
             transform: translate3d(0, 0, 0);
         }
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width: 768px)  {
+    header  {
+        padding: 0 1rem;
+    }
+    .max  {
+        height: 40px;
+    }
+
+    .fa-bars, .fa-x  {
+        font-size: 1.3rem;
+    }
+
+    header > h1  {
+        font-size: 1.4em;
+    }
+
+    header > div > nav > .nav-primaria.ativado  {
+        top: 40px;
     }
 
     section.section-div  {
@@ -388,6 +402,31 @@ section.section-div > img  {
     .curriculum > a  {
         font-weight: 500;
         font-size: .8em;
+    }
+}
+
+/*TABLET*/
+@media screen and (min-width: 768.1px) and (max-width: 992px)  {
+    header > div > nav > .nav-primaria.ativado  {
+        top: 80px;
+    }
+
+    .fa-bars, .fa-x  {
+        font-size: 1.8rem;
+    }
+    #sun  {
+        height: 30px;
+        width: 30px;
+    }
+
+    section.section-div  {
+        justify-items: end;
+        padding: 3rem 4rem;
+    }
+
+    .section-div > div {
+        grid-template-columns: 60% 40%;
+        margin-top: 2rem;
     }
 }
 

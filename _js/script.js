@@ -25,11 +25,13 @@ function diminuirHeader()  {
         header.classList.remove("max"); 
         header.classList.add("min"); 
         logo.style.fontSize = "25px";
+        document.querySelector('.nav-primaria').style.top = "65px";
     }
     else if(window.pageYOffset == 0 && header.classList.contains("min"))  {
         header.classList.add("max"); 
         header.classList.remove("min"); 
         logo.style.fontSize = "32px"; 
+        document.querySelector('.nav-primaria').style.top = "45px";
     }
     if(window.pageYOffset >= 500)  {
       linkTopo.style.display = "block";
