@@ -115,12 +115,7 @@ nav a::after  {
 }
 nav a:hover::after  {
     width: 100%;
-}
-
-#translate-container {
-    display: inline-block !important;
-    margin-right: 10px; /* Adapte a margem conforme necessário */
-}  
+} 
 
 #sun  {
     width: 20px;
@@ -307,6 +302,7 @@ section.section-div > img  {
     font-size: 1.7rem;
     border-radius: 5px;
     display: none;
+    opacity: .55;
     z-index: 100;
 }
 
@@ -326,8 +322,8 @@ section.section-div > img  {
         position: absolute;
         display: grid; 
         height: 100%;
+        right: 10px;
         z-index: 1;
-        right: 1px;
         border-radius: 0 0 4px 4px;
         animation: sobeSecao .8s ease-in-out forwards;       
     }
@@ -427,6 +423,10 @@ section.section-div > img  {
     .section-div > div {
         grid-template-columns: 60% 40%;
         margin-top: 2rem;
+    }
+
+    #redes-sociais .curriculum  {
+        width: 100%;
     }
 }
 

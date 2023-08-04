@@ -158,3 +158,11 @@ section#habilidades  {
   }
 
 
+/*MOBILE*/
+@media screen and (max-width: 320px)  {
+    #slider  {
+        width: 90%;
+    }
+}
+
+
