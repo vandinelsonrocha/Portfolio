@@ -165,4 +165,14 @@ section#habilidades  {
     }
 }
 
+@media screen and (max-width: 768px)  {
+    #habilidades > p  {
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    #habilidades > p::after{
+        width: 140px;
+    }
+}
+
 

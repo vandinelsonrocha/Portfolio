@@ -31,7 +31,12 @@ function diminuirHeader()  {
         header.classList.add("max"); 
         header.classList.remove("min"); 
         logo.style.fontSize = "32px"; 
-        document.querySelector('.nav-primaria').style.top = "45px";
+        if(window.innerWidth <= 768)  {
+          document.querySelector('.nav-primaria').style.top = "45px";
+        }
+        else if(window.innerWidth > 768 && window.innerWidth <= 992)  {
+          document.querySelector('.nav-primaria').style.top = "85px";
+        }
     }
     if(window.pageYOffset >= 500)  {
       linkTopo.style.display = "block";
@@ -67,6 +72,35 @@ ativaMenu.addEventListener('click', () =>  {
   navMenu.classList.toggle('ativado')
 })
 
+//--------------EFEITO NAS BOLINHAS--------------
+const todasBolinhas = document.querySelectorAll(".bolinhas > span")
+
+for(let i=0; i<todasBolinhas.length; i++)  {
+  if(todasBolinhas[i].classList.contains("bol1"))  {
+    setInterval(function()  {
+      todasBolinhas[i].style.backgroundColor = "var(--cor0)"
+    }, 1000)
+    setInterval(function()  {
+      todasBolinhas[i].style.backgroundColor = "var(--cor1)"
+    }, 4000)
+  }
+  else if(todasBolinhas[i].classList.contains("bol2"))  {
+    setInterval(function()  {
+      todasBolinhas[i].style.backgroundColor = "var(--cor0)"
+    }, 2000)
+    setInterval(function()  {
+      todasBolinhas[i].style.backgroundColor = "var(--cor1)"
+    }, 5000)
+  }
+  else if(todasBolinhas[i].classList.contains("bol3"))  {
+    setInterval(function()  {
+      todasBolinhas[i].style.backgroundColor = "var(--cor0)"
+    }, 3000)
+    setInterval(function()  {
+      todasBolinhas[i].style.backgroundColor = "var(--cor1)"
+    }, 6000)
+  }
+}
 
 //--------------SOBRE---------------
 //--------------MODAL POPUP--------------
