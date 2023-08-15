@@ -101,8 +101,7 @@ dialog::backdrop  {
 dialog  {
     margin: 15% auto;
     border-radius: .5rem;
-    padding: .1rem 1rem 1rem 1rem;
-    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    box-shadow: 0 0 4em rgb(0 0 0 / .8);
     width: 60%;
 }
 
@@ -112,9 +111,43 @@ dialog  {
     font-size: 1.5em;
     cursor: pointer;
     float: right;
+    margin-right: .6rem;
 }
-#dialog > h2  {
-    padding-top: 1.7rem;
+
+#dialog > div  {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+#dialog > div aside  {
+    padding-left: 1rem;
+}
+
+#dialog > div aside h2, #dialog > div aside h3  {
+    color: var(--cor1);
+    font-size: 1em;
+}
+
+#dialog > div aside h2  {
+    font-size: 1.25em;
+}
+
+#dialog > div aside ion-icon  {
+    margin-right: 5px;
+    transform: translateY(1.8px);
+}
+
+#dialog > div aside p  {
+    margin-bottom: 1rem;
+}
+
+#img-diploma  {
+    background-image: url("../img/jogo-da-sorte.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: yellow;
 }
 
 #mais-infos  {
@@ -131,6 +164,18 @@ dialog  {
 
 
 /*MOBILE*/
+@media screen and (max-width: 320px)  {
+    dialog  {
+        margin: 5% auto
+    };
+}
+
+@media screen and (min-width: 320.1px) and (max-width: 768px)  {
+    dialog  {
+        margin: 45% auto;
+    }
+}
+
 @media screen and (max-width: 768px)  {
     body > section  {
         width: 100%;
@@ -138,6 +183,18 @@ dialog  {
 
     #nome  {
         display: none;
+    }
+
+    dialog  {
+        width: 95%;
+    }
+
+    #dialog > span  {
+        font-size: 2.1em;
+    }
+
+    #dialog > div > aside  {
+        grid-column: 1 / -1;
     }
 
     #sobre > #infos  {
@@ -160,4 +217,10 @@ dialog  {
     body > section  {
         width: 95%;
     }
+
+    dialog  {
+        margin: 45% auto;
+        width: 95%;
+    }
+
 }

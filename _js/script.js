@@ -103,6 +103,23 @@ for(let i=0; i<todasBolinhas.length; i++)  {
 }
 
 //--------------SOBRE---------------
+//---------ver mais...ver menos---------
+let verMais = document.querySelector("#mais");
+let verMenos = document.querySelector("#menos");
+let texto = document.querySelector("#texto");
+
+texto.style.display = "none";
+
+verMais.addEventListener("click", function()  {
+  texto.style.display = "inline";
+  verMais.style.display = "none";
+});
+
+verMenos.addEventListener("click", function()  {
+  texto.style.display = "none";
+  verMais.style.display = "inline";
+});
+
 //--------------MODAL POPUP--------------
 const formacao = document.querySelector("#formacao");
 const modal = document.querySelector("dialog#dialog");
@@ -162,23 +179,6 @@ for (let i = 0; i < wrapper.length; i++) {
     });
   }
 }
-
-//---------ver mais...ver menos---------
-let verMais = document.querySelector("#mais");
-let verMenos = document.querySelector("#menos");
-let texto = document.querySelector("#texto");
-
-texto.style.display = "none";
-
-verMais.addEventListener("click", function()  {
-        texto.style.display = "block";
-        verMais.style.display = "none";
-});
-
-verMenos.addEventListener("click", function()  {
-    texto.style.display = "none";
-    verMais.style.display = "inline";
-});
 
 
 //---------PROJETOS---------
