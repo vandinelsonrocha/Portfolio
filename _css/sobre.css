@@ -99,7 +99,7 @@ dialog::backdrop  {
 }
 
 dialog  {
-    margin: 15% auto;
+    margin: auto auto;
     border-radius: .5rem;
     box-shadow: 0 0 4em rgb(0 0 0 / .8);
     width: 60%;
@@ -165,14 +165,9 @@ dialog  {
 
 /*MOBILE*/
 @media screen and (max-width: 320px)  {
-    dialog  {
-        margin: 5% auto
-    };
-}
-
-@media screen and (min-width: 320.1px) and (max-width: 768px)  {
-    dialog  {
-        margin: 45% auto;
+    #dialog > span  {
+        position: fixed;
+        right: 20px;
     }
 }
 
@@ -219,7 +214,6 @@ dialog  {
     }
 
     dialog  {
-        margin: 45% auto;
         width: 95%;
     }
 
