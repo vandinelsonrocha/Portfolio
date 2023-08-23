@@ -127,10 +127,12 @@ const fecharModal = document.querySelector("#dialog span");
 
 formacao.onclick = function()  {
   modal.showModal();
+  document.getElementsByTagName('html')[0].style.overflowY = "hidden"
 }
 
 fecharModal.onclick = function()  {
   modal.close();
+  document.getElementsByTagName('html')[0].style.overflowY = "auto"
 }
 
 

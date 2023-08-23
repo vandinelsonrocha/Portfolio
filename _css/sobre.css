@@ -102,7 +102,7 @@ dialog  {
     margin: auto auto;
     border-radius: .5rem;
     box-shadow: 0 0 4em rgb(0 0 0 / .8);
-    width: 60%;
+    width: 70%;
 }
 
 #dialog > span  {
@@ -117,7 +117,15 @@ dialog  {
 #dialog > div  {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
+}
+
+#img-diploma  {
+    background-image: url("../img/Diploma.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: yellow;
 }
 
 #dialog > div aside  {
@@ -142,14 +150,6 @@ dialog  {
     margin-bottom: 1rem;
 }
 
-#img-diploma  {
-    background-image: url("../img/jogo-da-sorte.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: yellow;
-}
-
 #mais-infos  {
     display: flex;
     flex-direction: column;
@@ -168,6 +168,14 @@ dialog  {
     #dialog > span  {
         position: fixed;
         right: 20px;
+    }
+
+    #dialog > div aside  {
+        padding: .7rem .7rem;
+    }
+
+    #dialog > div aside h2  {
+        font-size: 1.1em;
     }
 }
 
@@ -216,5 +224,4 @@ dialog  {
     dialog  {
         width: 95%;
     }
-
 }
