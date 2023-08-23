@@ -131,6 +131,7 @@ section.section-div  {
     padding: 0 6rem;
     color: var(--cor0);
     grid-template-columns: 1fr 1fr;
+    height: 100vh;
     animation: inicializar .7s;
 }
 
@@ -287,9 +288,9 @@ section.section-div > div > h2  {
 }
 
 section.section-div > img  {
-    width: 70%;
-    height: 80%;
-    margin-top: 3rem;
+    width: 75%;
+    height: 70%;
+    margin-top: 5rem;
 }
 
 #link-topo  {
@@ -442,4 +443,23 @@ body > section  {
     width: 80%;
     margin: 0 auto;
     background-color: var(--cor2);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px)  {
+    section.section-div  {
+        padding: 0 4rem;
+    }
+    section.section-div > img  {
+        width: 100%;
+        height: 70%;
+        margin-top: 1rem;
+    }
+}
+
+/*TV*/
+@media (min-width: 1920px)  {
+    body > main, header  {
+        width: 80vw;
+        margin: 0 auto;
+    }
 }

@@ -157,7 +157,7 @@ button#mostrar:hover  {
     }
 }
 
-/*DESKTOP+*/
+/*DESKTOP*/
 @media screen and (min-width: 992.1px)  {
     .modelos-projeto > ul  {
         gap: 4.5rem;
@@ -165,6 +165,13 @@ button#mostrar:hover  {
 
     .armazenamento-projetos > ul  {
         padding: 0 1rem;
+    }
+}
+
+/*TV*/
+@media (min-width: 1920px)  {
+    section#projetos  {
+        width: 70%;
     }
 }
 

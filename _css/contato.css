@@ -247,3 +247,10 @@ input[type="submit"]:hover  {
         text-align: justify;
     }
 }
+
+/*TV*/
+@media (min-width: 1920px)  {
+    footer#contato  {
+        width: 70%;
+    }
+}

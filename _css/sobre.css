@@ -31,7 +31,7 @@ section#sobre  {
     grid-column: 1 / 2;
     border-radius: 4px;
     width: 100%;
-    background-image: url("../img/Vandy2.jpg");
+    background-image: url("../img/foto-apresentacao2.jpg");
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -223,5 +223,12 @@ dialog  {
 
     dialog  {
         width: 95%;
+    }
+}
+
+/*TV*/
+@media (min-width: 1920px)  {
+    section#sobre  {
+        width: 70%;
     }
 }

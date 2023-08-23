@@ -89,7 +89,6 @@ section#habilidades  {
     align-items: center;
     flex-direction: column;
     border-radius: 8px;
-    padding: 0 .5rem;
     opacity: 0;
     transition: .6s;
 }
@@ -98,13 +97,21 @@ section#habilidades  {
     opacity: 1;
 }
 
+.content:hover h1, .content:hover p  {
+    background-color: gray;
+    padding: 0 .5rem;
+}
+
 .content  > h1  {
-    align-self: self-start;
     color: var(--cor0);
+    width: 100%;
+    text-align: left;
 }
 
 .content p  {
     color: var(--cor4);
+    width: 100%;
+    border-radius: 0 0 8px 8px;
 }
 
 .content > *  {
@@ -172,6 +179,19 @@ section#habilidades  {
 
     #habilidades > p::after{
         width: 140px;
+    }
+}
+
+@media screen and (min-width: 1024px)  {
+    #slider  {
+        width: 90%;
+    }
+}
+
+/*TV*/
+@media (min-width: 1920px)  {
+    section#habilidades  {
+        width: 70%;
     }
 }
 
