@@ -232,3 +232,9 @@ dialog  {
         width: 70%;
     }
 }
+
+@media (min-width: 2800px)  {
+    section#sobre  {
+        width: 55%;
+    }
+}

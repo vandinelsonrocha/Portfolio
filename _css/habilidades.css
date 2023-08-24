@@ -12,7 +12,7 @@ section#habilidades  {
 #habilidades > p::after{
     background-color: var(--cor1);
     height: 6px;
-    width: 180px;
+    width: 11.5rem;
     margin: 20px 0;
     content: '';
     display: block;
@@ -30,7 +30,7 @@ section#habilidades  {
 }
 
 .swiper  {
-    height: 300px;
+    height: 19rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,6 +100,7 @@ section#habilidades  {
 .content:hover h1, .content:hover p  {
     background-color: gray;
     padding: 0 .5rem;
+    opacity: .85;
 }
 
 .content  > h1  {
@@ -192,6 +193,12 @@ section#habilidades  {
 @media (min-width: 1920px)  {
     section#habilidades  {
         width: 70%;
+    }
+}
+
+@media (min-width: 2800px)  {
+    section#habilidades  {
+        width: 55%;
     }
 }
 

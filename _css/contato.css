@@ -254,3 +254,13 @@ input[type="submit"]:hover  {
         width: 70%;
     }
 }
+
+@media (min-width: 2800px)  {
+    footer#contato  {
+        width: 55%;
+    }
+
+    form  {
+        gap: 5.5rem;
+    }
+}
