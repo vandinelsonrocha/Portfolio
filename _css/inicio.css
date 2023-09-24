@@ -147,7 +147,6 @@ section.section-div > div .apresentacao  {
 }
 .apresentacao > #meuNome  {
     font-weight: 700;
-    font-family: 'Berkshire Swash', cursive;
     background: linear-gradient(to left, #00E3CC, #61DAFB, #269fc0, #3cbcf7);
     background-size: 400% 100%;
     animation: textoDegrade 10s linear infinite alternate;
@@ -291,6 +290,7 @@ section.section-div > img  {
     width: 75%;
     height: 70%;
     margin-top: 5rem;
+    display: block;
 }
 
 #link-topo  {
